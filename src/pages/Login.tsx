@@ -1,5 +1,4 @@
 import { Button, Heading, Text } from "@chakra-ui/react";
-import axios from "axios";
 import { Formik } from "formik";
 import React, { useEffect } from "react";
 
@@ -8,7 +7,7 @@ import { loginValidationSchema } from "../utils/formValidations";
 import { useLoginHook } from "../utils/api";
 import { useSelector } from "react-redux";
 import { AppStateType } from "../types";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 interface LoginProps {}
 
@@ -44,7 +43,7 @@ export const Login: React.FC<LoginProps> = () => {
               backgroundColor="#22272c"
               textColor="white"
               variant="solid"
-              loadingText="Login..."
+              loadingText="Please wait..."
               isLoading={isSubmitting}
               minWidth="300px"
               mt={"30"}
@@ -56,6 +55,11 @@ export const Login: React.FC<LoginProps> = () => {
           </form>
         )}
       </Formik>
+      <Link to="/register">
+        <Text mt={4} fontSize="14px">
+          Don't have an account? Sign Up
+        </Text>
+      </Link>
     </Wrapper>
   );
 };

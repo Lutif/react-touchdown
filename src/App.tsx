@@ -3,6 +3,7 @@ import { ChakraProvider, theme } from "@chakra-ui/react";
 import { Provider } from "react-redux";
 
 import { Login, Register, Landing, Home } from "./pages";
+import { PrivateRoute } from "./components";
 import { store } from "./store";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -11,18 +12,18 @@ export const App = () => (
     <Switch>
       <Provider store={store}>
         <ChakraProvider theme={theme}>
-          <Route exact path="/">
-            <Landing />
-          </Route>
           <Route exact path="/login">
             <Login />
+          </Route>
+          <Route exact path="/">
+            <Landing />
           </Route>
           <Route exact path="/register">
             <Register />
           </Route>
-          <Route exact path="/home">
+          <PrivateRoute exact path="/home">
             <Home />
-          </Route>
+          </PrivateRoute>
         </ChakraProvider>
       </Provider>
     </Switch>

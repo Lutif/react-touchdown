@@ -26,7 +26,7 @@ export const auth = (state = initialState, action: ActionType) => {
       };
     default:
       return {
-        ...initialState,
+        ...state,
       };
   }
 };

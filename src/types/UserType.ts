@@ -1,21 +1,19 @@
 export type UserType = {
   _id: string;
-  firstName: string;
-  lastName: string;
+  fullName: string;
   avatar: string;
   isActive: boolean;
   email: string;
   isEmailVerified: boolean;
   companies: UserCompanyType[];
-  createdAt: string;
   updatedAt: string;
 };
 
 type UserCompanyType = {
   _id: string;
   company: CompanyType;
-  isActive: true;
-  creator: true;
+  isActive: boolean;
+  creator: boolean;
   role: string;
   createdAt: string;
   updatedAt: string;

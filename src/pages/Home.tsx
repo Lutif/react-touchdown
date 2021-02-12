@@ -19,12 +19,13 @@ export const Home: React.FC<HomeProps> = () => {
       history.push("/");
     }
   }, [auth.isLoggedIn]);
+  console.log("hello", auth?.user);
 
   return (
     <Box backgroundColor="white">
       <VStack>
-        <Heading>Welcome to TouchDown</Heading>
-        <Text>Still working on homepage thank you for registering </Text>
+        <Heading>Welcome to TouchDown {auth.user?.fullName}</Heading>
+        <Text>Still working on homepage thank you for registering</Text>
         <Text>Bored? </Text>
         <Button
           backgroundColor="#22272c"

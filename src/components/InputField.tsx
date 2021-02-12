@@ -14,7 +14,6 @@ export const InputField: React.FC<InputFieldProps> = ({
   return (
     <FormControl mb={2} minHeight="67px" isInvalid={!!error}>
       <Input
-        borderColor="black"
         {...field}
         {...props}
         id={field.name}

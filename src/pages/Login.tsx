@@ -26,13 +26,15 @@ export const Login: React.FC<LoginProps> = () => {
     <Wrapper variant="regular">
       {res.status === 401 && (
         <Text mb={10} color="red">
-          Wrong Creadientials
+          Wrong credential
         </Text>
       )}
       <Formik
         initialValues={{ username: "", password: "" }}
         onSubmit={async (values) => login(values)}
         validationSchema={loginValidationSchema}
+        validateOnChange={false}
+        validateOnBlur={false}
       >
         {({ handleSubmit, isSubmitting }) => (
           <form>

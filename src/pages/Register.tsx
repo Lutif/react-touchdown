@@ -39,6 +39,8 @@ export const Register: React.FC<RegisterProps> = () => {
           register(values);
         }}
         validationSchema={registerValidationSchema}
+        validateOnChange={false}
+        validateOnBlur={false}
       >
         {({ handleSubmit, isSubmitting }) => (
           <form>

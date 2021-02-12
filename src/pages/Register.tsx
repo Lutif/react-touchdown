@@ -20,6 +20,12 @@ export const Register: React.FC<RegisterProps> = () => {
 
   return (
     <Wrapper variant="regular">
+      {res.status === 409 && (
+        <Text mb={10} color="red">
+          Account already exists for this email,
+          <Link to="/login"> Please login.</Link>
+        </Text>
+      )}
       <Formik
         initialValues={{
           firstName: "",

@@ -1,4 +1,4 @@
-import { Button, Heading, Text } from "@chakra-ui/react";
+import { Button, Heading, Icon, Text } from "@chakra-ui/react";
 import { Formik } from "formik";
 import React, { useEffect } from "react";
 
@@ -8,6 +8,8 @@ import { useLoginHook } from "../utils/api";
 import { useSelector } from "react-redux";
 import { AppStateType } from "../types";
 import { useHistory, Link } from "react-router-dom";
+import { AiOutlineMail } from "react-icons/ai";
+import { RiLockPasswordFill } from "react-icons/ri";
 
 interface LoginProps {}
 
@@ -39,8 +41,16 @@ export const Login: React.FC<LoginProps> = () => {
         {({ handleSubmit, isSubmitting }) => (
           <form>
             <Heading mb={10}>Login</Heading>
-            <InputField name="email" placeholder="Email address" />
-            <InputField type="password" name="password" />
+            <InputField
+              name="email"
+              placeholder="Email address"
+              Icon={() => <Icon color="gray.400" as={AiOutlineMail} />}
+            />
+            <InputField
+              type="password"
+              name="password"
+              Icon={() => <Icon color="gray.400" as={RiLockPasswordFill} />}
+            />
             <Button
               backgroundColor="#22272c"
               textColor="white"

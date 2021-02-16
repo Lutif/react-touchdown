@@ -29,7 +29,6 @@ export const InputField: React.FC<InputFieldProps> = ({
           pointerEvents="none"
           children={<Icon color="gray.300" />}
         />
-
         <Input
           {...field}
           {...props}

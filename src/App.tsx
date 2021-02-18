@@ -8,7 +8,7 @@ import { store } from "./store";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export const App = () => (
-  <Router>
+  <Router basename={process.env.PUBLIC_URL}>
     <Switch>
       <Provider store={store}>
         <ChakraProvider theme={theme}>

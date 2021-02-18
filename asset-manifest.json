@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/react-touchdown/static/js/main.495dda4a.chunk.js",
-    "main.js.map": "/react-touchdown/static/js/main.495dda4a.chunk.js.map",
+    "main.js": "/react-touchdown/static/js/main.f1b7fb7f.chunk.js",
+    "main.js.map": "/react-touchdown/static/js/main.f1b7fb7f.chunk.js.map",
     "runtime-main.js": "/react-touchdown/static/js/runtime-main.d410f0d6.js",
     "runtime-main.js.map": "/react-touchdown/static/js/runtime-main.d410f0d6.js.map",
     "static/js/2.7d777961.chunk.js": "/react-touchdown/static/js/2.7d777961.chunk.js",
@@ -14,6 +14,6 @@
   "entrypoints": [
     "static/js/runtime-main.d410f0d6.js",
     "static/js/2.7d777961.chunk.js",
-    "static/js/main.495dda4a.chunk.js"
+    "static/js/main.f1b7fb7f.chunk.js"
   ]
 }
